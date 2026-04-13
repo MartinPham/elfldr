@@ -30,13 +30,13 @@ int sceKernelSendNotificationRequest(int, notify_request_t*, size_t, int);
 
 void
 notify(const char *fmt, ...) {
-  notify_request_t req;
-  va_list args;
+  // notify_request_t req;
+  // va_list args;
 
-  bzero(&req, sizeof req);
-  va_start(args, fmt);
-  vsnprintf(req.message, sizeof req.message, fmt, args);
-  va_end(args);
+  // bzero(&req, sizeof req);
+  // va_start(args, fmt);
+  // vsnprintf(req.message, sizeof req.message, fmt, args);
+  // va_end(args);
 
-  sceKernelSendNotificationRequest(0, &req, sizeof req, 0);
+  // sceKernelSendNotificationRequest(0, &req, sizeof req, 0);
 }
